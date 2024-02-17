@@ -65,6 +65,23 @@ function pintarArray(array){
 
 const arrayMapi = (arr, fun) => arr.map(fun);
 
+function eliminarDuplicados(arrayOriginal){
+    let arraySinDuplicados = [];
+        arrayOriginal.sort((a,b) => (a-b));
+    for (let i=0; i<arrayOriginal.length; i++){
+    if ((arrayOriginal[i] === arrayOriginal[(i+1)]) || (i == 0)){
+        i=i;
+        } else if(i == ((arrayOriginal.length) - 1)) {
+            arraySinDuplicados.push(arrayOriginal[i]);
+        } else {   
+            arraySinDuplicados.push(arrayOriginal[i]);
+        }
+    }
+        return arraySinDuplicados;
+    }
+
+
+
 //14. Mi solución no está conseguida. Añado la de Vero con filter y reviso después.
 /*
 function eliminarDuplicados(arrOriginal) {
