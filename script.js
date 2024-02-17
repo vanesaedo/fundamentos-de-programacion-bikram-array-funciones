@@ -17,8 +17,8 @@ const suma = (a, b) => { return (a + b); };
 const potenciacion = (a, b) => { return (a ** b); };
 
 const separarPalabras = param => {
-    return param.split(',');
-};
+    return param.split(' ');    
+}
 
 function repetirString(word, num) {
 
@@ -27,7 +27,7 @@ function repetirString(word, num) {
 
     for (let i = 0; i < num; i++) {
         wordRepeated.push(word);
-        sentenceResult = wordRepeated.join();
+        sentenceResult = wordRepeated.join('');
     }
     return sentenceResult;
 }
@@ -59,76 +59,60 @@ const obtenerPares = arrInicial => {
     return arrPares;
 }
 
-const pintarArray = arrPintar => {
-    return (`'[${arrPintar}]'`);
-}
+function pintarArray(array){
+    return `[${array.join(', ')}]`;
+  }
 
-const arrayMapi = (arrMapi, func) => {
-    for (let i = 0; i < arrMapi.length; i++) {
-        func(arrMapi[i]);
-    }
-}
+const arrayMapi = (arr, fun) => arr.map(fun);
 
-//-------HASTA AQUÍ---------
-
-//NO FUNCIONA
-
-/*-------
-
+//14. Mi solución no está conseguida. Añado la de Vero con filter y reviso después.
+/*
 function eliminarDuplicados(arrOriginal) {
     let arrSinDuplicados = [];
-//Miro el primer item del array original
-    for (let i = 0; i < arrOriginal.length; i++) {
-//Comparo i con los demás items mediante el contador j 
-        for (let j = 0; (j < arrOriginal.length); j++) {
-//Compruebo con j !=i que no lo estoy comparando consigo mismo.
-            while (j != i) {
-//Si los valores de ambas posiciones coinciden...
-                if (arrOriginal[i] === arrOriginal[j]) {
-//... miro a ver si ya está guardado, y si no lo está, lo guardo, si lo está, salgo.
-                    for (let l = 0; l < arrSinDuplicados.length; l++) {
-                        if (arrOriginal[i] !== arrSinDuplicados[l]) {
-                            (arrSinDuplicados).push(arrOriginal[i]);
-                        } else {
-                            break;
-                        }
-                    } 
-                } else {
-                    break;
-                }          
-            }              
+   
+    for (let i=0; i<arrOriginal.length ; i++){
+        for (let j=0; j<arrOriginal.length; j++){
+            if (arrOriginal[i] !== arrOriginal[j]) { 
+              if (arrSinDuplicados.length>0){
+                 for (k=0; k< arrSinDuplicados.length; k++){
+                    //comprobando que no se ha introducido ya el valor en la lista.
+                   while (arrOriginal[i] !=== arrSinDuplicados[k]){
+                        arrSinDuplicados.push(arrOriginal[j]);
+                    }
+                  
+            }
         }
     }
     return arrSinDuplicados;
-    }
-           
-    
-        16	arrayOriginal = [22, 22, 7, 9, 9, 8, 3, 1];
-        17	eliminarDuplicados(a);
+}
+ 
+/*
+//Solución Vero eliminarDuplicados
 
-  /*      function eliminarDuplicados(arrOriginal) {
-            let arrDuplicados = [];
-
-            for (let i = 0; (i < arrOriginal.length); i++) {
-                //let hallado=false;
-                for (let j = 0; j < arrDuplicados.length; j++) {
-                    if (arrOriginal[i] === arrDuplicados[j]) {
-                        hallado = true;
-                        break;
-                    }
-
-                }
-                if (!hallado) arrDuplicados.push(arrOriginal[i])
-            }
-            return arrDuplicados;
-        }
+function eliminarDuplicados(array) {
+  let nuevoArray = [];
+  for (i = 0; i < array.length; i++) {
+      if (!nuevoArray.includes(array[i])) {
+        nuevoArray.push(array[i]);
+      }
+  }
+  return nuevoArray;
+}
+//Solución Alberto eliminarDuplicados también con filter
+/*
+function eliminarDuplicados(cosota) {
+    let resultao = cosota.filter((item, index) => {
+        return cosota.indexOf(item) === index;
+    });
+    return resultao;
+};
 */
         //--Iteraciones :european_castle: proyecto :european_castle
 
         // Arrays: 15, 16, 17, 18
 
-/*--No revisado
 
+/*
         const arrayNumerosNeg = arrNumNeg => {
             for (i = 0; i > (-9); i--) {
                 arrNumNeg.push(i);
@@ -166,4 +150,5 @@ function eliminarDuplicados(arrOriginal) {
 
         const obtenerImpares = arrObtImp => {
             arrArr2.forEach(arrArr2.[] % 2 === 0);
-        }*/
+        }
+        */
