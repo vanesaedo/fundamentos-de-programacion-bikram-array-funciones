@@ -33,7 +33,7 @@ En esta ocasión, el bikram se dividirá en :crossed_swords: Pair Programming :c
 
 - [X] 8.- Crea la función **repetirString** que acepte como argumento **un string y un número** y devuelva **un string que sea el resultado de concatenar el primer string el número dado de veces**
 
-- [ ] 9.- Crea la función **esPrimo** que acepte como argumento **un número** y devuelva ****true si es primo y false si no lo es****
+- [X] 9.- Crea la función **esPrimo** que acepte como argumento **un número** y devuelva ****true si es primo y false si no lo es****
 
 ### Mezclando arrays y funciones ###
 
