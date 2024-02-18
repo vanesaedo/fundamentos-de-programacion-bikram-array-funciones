@@ -157,11 +157,22 @@ function obtenerImpares(arrNum){
 }
 
 function sumarArray(Array){
-    Array = Array.parseInt;
-   for (let i=0; i < (Array.length -1); i++){
+    let sum=0;
+   for (let i=0; i < Array.length ; i++){
  
-   Array[0] = Array[0] + Array[(i+1)];
+   sum+=  Array[i];
    }
-   let resultado = Array[0];
-   return resultado;
+
+   return sum;
    }
+
+   function multiplicarArray(Array){
+    let mul=1;
+   for (let i=0; i < Array.length ; i++){
+
+   mul*=  Array[i];
+   }
+
+   return mul;
+   }
+
