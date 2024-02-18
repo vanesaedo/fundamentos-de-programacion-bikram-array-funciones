@@ -81,6 +81,20 @@ function eliminarDuplicados(arrayOriginal){
     }
 
 /*
+
+// Solucíon con aporte de Adrián
+
+function eliminarDuplicados(arrayOriginal){
+    let arraySinDuplicados = [];
+        arrayOriginal.sort((a,b) => (a-b));
+    for (let i=0; i<arrayOriginal.length; i++){
+        if (arrayOriginal[i] !== arrayOriginal[(i + 1)]) {
+            arraySinDuplicados.push(arrayOriginal[i]);
+        }
+    }
+    return arraySinDuplicados;
+}
+
 //Solución Vero eliminarDuplicados
 
 function eliminarDuplicados(array) {
