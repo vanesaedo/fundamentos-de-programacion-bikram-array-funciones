@@ -106,67 +106,62 @@ function eliminarDuplicados(array) {
   }
   return nuevoArray;
 }
-//Solución Alberto eliminarDuplicados también con filter
-/*
-function eliminarDuplicados(cosota) {
-    let resultao = cosota.filter((item, index) => {
-        return cosota.indexOf(item) === index;
-    });
-    return resultao;
-};
 */
-        //--Iteraciones :european_castle: proyecto :european_castle
 
-        // Arrays: 15, 16, 17, 18
+//--Iteraciones :european_castle: proyecto :european_castle
 
-       let arrayNumerosNeg = [0,-1,-2,-3,-4,-5,-6,-7,-8,-9];
+// Arrays: 15, 16, 17, 18
 
-        let holaMundo = ['Hola', 'Mundo'];
+let arrayNumerosNeg = [0,-1,-2,-3,-4,-5,-6,-7,-8,-9];
 
-        let loGuardoTodo = ['hola', 'que', 23, 42.33, 'tal'];
+let holaMundo = ['Hola', 'Mundo'];
 
-        let arrayDeArrays = [[756, 'nombre'], [225, 'apellido'], [298, 'direccion']];
+let loGuardoTodo = ['hola', 'que', 23, 42.33, 'tal'];
 
-        //Funciones: 19, 20, 21, 22
+let arrayDeArrays = [[756, 'nombre'], [225, 'apellido'], [298, 'direccion']];
 
-        function multiplicacion (c, d) {
-            resultado = c*d;
-            return resultado;
+//Funciones: 19, 20, 21, 22
+
+function multiplicacion (c, d) {
+    resultado = c*d;
+    return resultado;
+}
+
+const division = (e, f) => {
+    return e / f;
+}
+
+const esPar = g => {
+    return g % 2 === 0;
+}
+  
+
+ arrayFunciones = [function suma (a,b){return (a+b);} ,function resta (a,b) {return (a-b);}, function multiplicacion(a,b){return (a*b);}];
+
+ //Mezclando arrays y funciones: 23, 24, 25, 26.
+
+function ordenarArray2 (arrNum){
+            arrNum = arrNum.sort((a, b) => (b - a));
+            return arrNum;
         }
 
-        const division = (e, f) => {
-            return e / f;
+function obtenerImpares(arrNum){
+    let arrImp = [];
+    arrNum = arrNum.sort((a,b)=>(a-b));
+    for (let i=0; i < arrNum.length; i++){
+        if (arrNum[i]%2 !== 0){
+            arrImp.push(arrNum[i]);
         }
+    }
+    return arrImp;
+}
 
-        const esPar = g => {
-            return g % 2 === 0;
-        }
-/*
-        let arrayFunciones(suma,resta,multiplicacion){
-            function suma(h, j){
-                let resultadoSuma = (h+j);
-                return resultadoSuma;
-               
-            }
-            suma(h,j);
-            function resta(h, j){
-                let resultadoResta=(h-j);
-                return resultadoResta;   
-            }
-            return resta(h,j);
-            function multiplicacion(h, j){
-                let resultadoMultiplicacion= (h*j);
-                return resultadoMultiplicacion();
-            }
-            multiplicacion(h,j); 
-        }
-       
-        //Mezclando arrays y funciones: 23, 24, 25, 26.
-/*
-        const ordenarArray2 = arrArr2 => {
-            arrArr2.toSorted((a, b) => (b - a));
-        }
-
-        const obtenerImpares = arrObtImp => {
-            arrArr2.forEach(arrArr2.[] % 2 === 0);
-        }*/
+function sumarArray(Array){
+    Array = Array.parseInt;
+   for (let i=0; i < (Array.length -1); i++){
+ 
+   Array[0] = Array[0] + Array[(i+1)];
+   }
+   let resultado = Array[0];
+   return resultado;
+   }
